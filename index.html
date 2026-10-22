@@ -1,0 +1,103 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <h1>Employee Registration</h1>
+            <p class="subtitle">Create a new employee account</p>
+
+            <form id="employeeForm" novalidate>
+
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter full name"
+                    >
+                    <small class="error" id="nameError"></small>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="employee@example.com"
+                    >
+                    <small class="error" id="emailError"></small>
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-box">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter password"
+                        >
+                        <button type="button" id="togglePassword">
+                            Show
+                        </button>
+                    </div>
+
+                   
+
+                    <small class="error" id="passwordError"></small>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        placeholder="Enter 10-digit phone number"
+                    >
+                    <small class="error" id="phoneError"></small>
+                </div>
+
+                <!-- Department -->
+                <div class="form-group">
+                    <label for="department">Department</label>
+                    <select id="department" name="department">
+                        <option value="">-- Select Department --</option>
+                        <option value="HR">Human Resources</option>
+                        <option value="IT">Information Technology</option>
+                        <option value="Finance">Finance</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Operations">Operations</option>
+                    </select>
+
+                    <small class="error" id="departmentError"></small>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Register Employee
+                </button>
+
+                <div id="successMessage" class="success"></div>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
